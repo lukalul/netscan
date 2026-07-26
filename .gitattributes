@@ -1,0 +1,9 @@
+# Normalize line endings to LF in the repository for all text files.
+* text=auto eol=lf
+
+# Explicitly treat these as text.
+*.py   text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+*.toml text eol=lf
+LICENSE text eol=lf

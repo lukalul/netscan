@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netscan"
+version = "0.1.0"
+description = "A small, dependency-free multi-threaded TCP port scanner."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "luka" }]
+keywords = ["port-scanner", "networking", "security", "tcp", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: System :: Networking",
+    "Topic :: Security",
+]
+
+[project.urls]
+Homepage = "https://github.com/lukalul/netscan"
+Repository = "https://github.com/lukalul/netscan"
+Issues = "https://github.com/lukalul/netscan/issues"
+
+[project.scripts]
+netscan = "cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools]
+packages = ["scanner"]
+py-modules = ["cli"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
